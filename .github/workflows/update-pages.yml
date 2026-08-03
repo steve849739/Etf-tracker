@@ -1,0 +1,70 @@
+name: ETF 每日更新并发布
+
+# 工作日(周一~周五)北京时间 16:30 自动运行一次；
+# 也可在 GitHub Actions 页面手动触发「Run workflow」立即执行一次。
+on:
+  schedule:
+    - cron: "30 8 * * 1-5"   # UTC 08:30 = 北京时间 16:30
+  workflow_dispatch:
+
+permissions:
+  contents: write    # 回写 etf跟踪.xlsx / data/etf_data.json 到仓库
+  pages: write       # 部署 GitHub Pages
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: 抓取并更新数据
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 抓取交易所数据并更新跟踪表
+        run: python run_etf.py
+
+      - name: 生成展示页面 dashboard/report.html
+        run: python export_dashboard.py
+
+      - name: 回写更新后的数据到仓库
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "chore: 每日ETF数据更新 $(date -u +%F)"
+          git push
+
+  deploy:
+    name: 部署到 GitHub Pages
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 配置 Pages
+        uses: actions/configure-pages@v5
+
+      - name: 上传页面产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+
+      - name: 部署到 Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
