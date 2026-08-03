@@ -96,8 +96,11 @@ etf清单.xlsx ──→ etf_fetch.py ──→ data/etf_data.json ──→ etf
 ## 发布为公开网页（GitHub Pages）
 
 项目已内置 GitHub Actions 工作流 `.github/workflows/update-pages.yml`：
-**工作日（周一~周五）北京时间 16:30** 自动执行 `run_etf.py` → `export_dashboard.py`，
+**工作日（周一~周五）北京时间 08:30** 自动执行 `run_etf.py` → `export_dashboard.py`，
 把最新数据回写仓库并把 `dashboard/` 部署为公开网页。节假日抓不到新数据时脚本幂等跳过，不会出错。
+
+> 时间说明：上交所/深交所每天早上 7 点才确保更新前一交易日的公示份额，
+> 因此定时任务安排在 08:30（7 点后留 1.5 小时缓冲），抓取的是前一交易日的完整数据。
 
 ### 上线步骤（一次性）
 
