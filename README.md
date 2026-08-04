@@ -105,21 +105,21 @@ etf清单.xlsx ──→ etf_fetch.py ──→ data/etf_data.json ──→ etf
 ### 上线步骤（一次性）
 
 1. 注册 GitHub 账号（https://github.com/signup），准备一个邮箱
-2. 新建私有仓库（Private），例如 `etf-tracker`，**不要**勾选自动生成 README
+2. 新建公开仓库（Public），例如 `Etf-tracker`，**不要**勾选自动生成 README（GitHub Pages 的 Free 计划要求仓库为 Public）
 3. 推送项目到仓库：
 
 ```bash
-git remote add origin https://github.com/<你的用户名>/etf-tracker.git
+git remote add origin https://github.com/<你的用户名>/Etf-tracker.git
 git branch -M main
 git push -u origin main
 ```
 
 4. 打开仓库 **Settings → Pages**，在「Build and deployment」的 Source 下拉框选择 **GitHub Actions**
 5. 回到仓库 **Actions** 标签页，选中 `ETF 每日更新并发布`，点 **Run workflow** 手动触发一次
-6. 首次运行成功后，页面地址为 `https://<你的用户名>.github.io/etf-tracker/`
+6. 首次运行成功后，页面地址为 `https://<你的用户名>.github.io/Etf-tracker/`
 
-> 提示：私有仓库也可以部署公开的 Pages 站点，清单/跟踪表等运营文件不会暴露。
-> 免费额度每月 100 次构建，工作日每日一次约 22 次，足够用。
+> 提示：GitHub Pages 的 Free 计划要求仓库为 **Public**（即公开仓库源码）。若不想公开代码，需升级 Pro/Team，或改用其他静态托管（如 Cloudflare Pages、Netlify）。
+> 公开仓库的 Actions 免费且无限量，工作日每日一次约 22 次，绰绰有余。
 
 ### 日常维护
 

@@ -11,3 +11,19 @@ etf-share-tracker.zip
 
 # 自动备份
 etf跟踪_backup_*.xlsx
+
+# ===== 以下为新增强化 =====
+# 密钥（明文）
+.env
+.env.local
+
+# 临时文件 / 缓存
+tmp/
+.cache/
+*.log
+*.tmp
+
+# 测试垃圾 / 实验产物
+scratch/
+tests/output/
+*.bak

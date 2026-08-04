@@ -46,9 +46,9 @@ import requests
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
 
-BASE_DIR = r"D:\myWorkSpace\myProject\汇金跟踪"
-LIST_PATH = os.environ.get("ETF_LIST_PATH", BASE_DIR + r"\etf清单.xlsx")
-TRACK_PATH = os.environ.get("ETF_TRACK_PATH", BASE_DIR + r"\etf跟踪.xlsx")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+LIST_PATH = os.environ.get("ETF_LIST_PATH", os.path.join(BASE_DIR, "etf清单.xlsx"))
+TRACK_PATH = os.environ.get("ETF_TRACK_PATH", os.path.join(BASE_DIR, "etf跟踪.xlsx"))
 LIST_SHEET = "ETF清单"
 
 COL_HEADERS = ["来源", "代码", "名称", "日期", "当日公示份额（万份）",
