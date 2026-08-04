@@ -60,6 +60,9 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v4
 
+      - name: 生成 index.html（让根路径可访问）
+        run: cp dashboard/report.html dashboard/index.html
+
       - name: 配置 Pages
         uses: actions/configure-pages@v5
 
