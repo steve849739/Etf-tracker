@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-04T09:27:56.807981",
+  "fetched_at": "2026-08-04T02:27:01.786201",
   "mode": "daily",
   "funds": [
     {
@@ -28,7 +28,7 @@
       "name": "沪深300ETF嘉实",
       "code": "159919",
       "source": "深交所",
-      "base_share": 4081881.66,
+      "base_share": null,
       "base_date": "2025-12-31",
       "latest": {
         "date": "2026-08-03",
