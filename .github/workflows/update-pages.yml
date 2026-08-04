@@ -45,7 +45,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git diff --cached --quiet || git commit -m "chore: 每日ETF数据更新 $(date -u +%F)"
-          git push
+          # 若并发 run 已先 push，先拉取合并（冲突保留本次最新抓取的数据）
+          git pull --no-rebase -X ours origin main || true
+          git push origin main
 
   deploy:
     name: 部署到 GitHub Pages
