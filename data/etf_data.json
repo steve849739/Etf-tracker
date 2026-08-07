@@ -1,24 +1,28 @@
 {
-  "fetched_at": "2026-08-06T04:42:09.859815",
+  "fetched_at": "2026-08-07T04:09:33.628094",
   "mode": "daily",
   "funds": [
     {
       "name": "上证50华夏",
       "code": "510050",
       "source": "上交所",
-      "base_share": null,
+      "base_share": 5666466.68,
       "base_date": "2025-12-31",
-      "_error": "403 Client Error: Forbidden for url: https://query.sse.com.cn/commonQuery.do?jsonCallBack=callback",
-      "latest": null
+      "latest": {
+        "date": "2026-08-06",
+        "share": 710796.68
+      }
     },
     {
       "name": "沪深300etf华泰柏瑞",
       "code": "510300",
       "source": "上交所",
-      "base_share": null,
+      "base_share": 8882958.77,
       "base_date": "2025-12-31",
-      "_error": "403 Client Error: Forbidden for url: https://query.sse.com.cn/commonQuery.do?jsonCallBack=callback",
-      "latest": null
+      "latest": {
+        "date": "2026-08-06",
+        "share": 2570538.77
+      }
     },
     {
       "name": "沪深300ETF嘉实",
@@ -26,17 +30,21 @@
       "source": "深交所",
       "base_share": null,
       "base_date": "2025-12-31",
-      "_error": "503 Server Error: Service Temporarily Unavailable for url: https://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=scsj_fund_jjgm&jjlb=ETF&txtStart=2026-08-05&txtEnd=2026-08-05&txtDm=159919&tab1PAGENO=1&tab1PAGESIZE=20&RANDOM=0.3790825838",
-      "latest": null
+      "latest": {
+        "date": "2026-08-06",
+        "share": 648831.66
+      }
     },
     {
       "name": "易方达创业板ETF",
       "code": "159915",
       "source": "深交所",
-      "base_share": null,
+      "base_share": 3150245.49,
       "base_date": "2025-12-31",
-      "_error": "503 Server Error: Service Temporarily Unavailable for url: https://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=scsj_fund_jjgm&jjlb=ETF&txtStart=2026-08-05&txtEnd=2026-08-05&txtDm=159915&tab1PAGENO=1&tab1PAGESIZE=20&RANDOM=0.2742541709",
-      "latest": null
+      "latest": {
+        "date": "2026-08-06",
+        "share": 1876845.49
+      }
     }
   ]
 }
