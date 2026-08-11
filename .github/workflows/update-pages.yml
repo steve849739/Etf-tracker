@@ -39,8 +39,28 @@ jobs:
       - name: 抓取交易所数据并更新跟踪表
         run: python run_etf.py
 
+      # 排查日志①：打印抓取结果摘要，一眼看出"数据更新到哪天"
+      - name: 日志-数据摘要
+        run: |
+          python - <<'EOF'
+          import json
+          with open('data/etf_data.json', encoding='utf-8') as f:
+              d = json.load(f)
+          print('fetched_at:', d.get('fetched_at'), '| mode:', d.get('mode'))
+          for f_ in d.get('funds', []):
+              lt = f_.get('latest') or {}
+              print('  [%s] %s 最新日期=%s 份额=%s' % (
+                  f_.get('code'), f_.get('name'), lt.get('date'), lt.get('share')))
+          EOF
+
       - name: 生成展示页面 dashboard/report.html
         run: python export_dashboard.py
+
+      # 排查日志②：确认页面生成时间与明细完整性（export_dashboard.py 已输出每基金明细摘要）
+      - name: 日志-页面生成结果
+        run: |
+          echo "generated_at: $(grep -o '数据生成时间：[^<]*' dashboard/report.html | head -1)"
+          echo "页面大小: $(wc -c < dashboard/report.html) bytes"
 
       - name: 回写更新后的数据到仓库
         run: |

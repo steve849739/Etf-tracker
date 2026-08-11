@@ -348,8 +348,14 @@ def main():
     os.makedirs(os.path.dirname(OUT_HTML), exist_ok=True)
     with open(OUT_HTML, "w", encoding="utf-8") as f:
         f.write(render_html(data))
-    log.info("已生成 %s (汇总 %d 基金, 明细 %d 个sheet)",
-             OUT_HTML, len(data["summary"]), len(data["details"]))
+    # 详细日志：方便 CI/本地排查"页面数据是否更新、更新到哪天"
+    log.info("已生成 %s (generated_at=%s, %d 只基金)",
+             OUT_HTML, data["generated_at"], len(data["summary"]))
+    for s in data["summary"]:
+        rows = data["details"].get(s["code"], [])
+        last_date = rows[-1]["date"] if rows else "-"
+        log.info("  [%s] %s 明细行数=%d 最新日期=%s 份额=%s",
+                 s["code"], s["name"], len(rows), last_date, s["share"])
 
 
 if __name__ == "__main__":
