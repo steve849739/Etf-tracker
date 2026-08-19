@@ -1,28 +1,24 @@
 {
-  "fetched_at": "2026-08-18T02:34:47.880090",
+  "fetched_at": "2026-08-19T02:37:54.241151",
   "mode": "daily",
   "funds": [
     {
       "name": "上证50华夏",
       "code": "510050",
       "source": "上交所",
-      "base_share": 5666466.68,
+      "base_share": null,
       "base_date": "2025-12-31",
-      "latest": {
-        "date": "2026-08-17",
-        "share": 691986.68
-      }
+      "_error": "403 Client Error: Forbidden for url: https://query.sse.com.cn/commonQuery.do?jsonCallBack=callback",
+      "latest": null
     },
     {
       "name": "沪深300etf华泰柏瑞",
       "code": "510300",
       "source": "上交所",
-      "base_share": 8882958.77,
+      "base_share": null,
       "base_date": "2025-12-31",
-      "latest": {
-        "date": "2026-08-17",
-        "share": 2304408.77
-      }
+      "_error": "403 Client Error: Forbidden for url: https://query.sse.com.cn/commonQuery.do?jsonCallBack=callback",
+      "latest": null
     },
     {
       "name": "沪深300ETF嘉实",
@@ -31,8 +27,8 @@
       "base_share": null,
       "base_date": "2025-12-31",
       "latest": {
-        "date": "2026-08-17",
-        "share": 617241.66
+        "date": "2026-08-18",
+        "share": 613281.66
       }
     },
     {
@@ -42,8 +38,8 @@
       "base_share": 3150245.49,
       "base_date": "2025-12-31",
       "latest": {
-        "date": "2026-08-17",
-        "share": 1711445.49
+        "date": "2026-08-18",
+        "share": 1719145.49
       }
     }
   ]
