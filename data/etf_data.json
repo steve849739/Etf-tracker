@@ -1,28 +1,24 @@
 {
-  "fetched_at": "2026-09-30T07:05:04.911612",
+  "fetched_at": "2026-10-01T00:00:56.346758",
   "mode": "daily",
   "funds": [
     {
       "name": "上证50华夏",
       "code": "510050",
       "source": "上交所",
-      "base_share": 5666466.68,
+      "base_share": null,
       "base_date": "2025-12-31",
-      "latest": {
-        "date": "2026-09-29",
-        "share": 724836.68
-      }
+      "_error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+      "latest": null
     },
     {
       "name": "沪深300etf华泰柏瑞",
       "code": "510300",
       "source": "上交所",
-      "base_share": 8882958.77,
+      "base_share": null,
       "base_date": "2025-12-31",
-      "latest": {
-        "date": "2026-09-29",
-        "share": 2416458.77
-      }
+      "_error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+      "latest": null
     },
     {
       "name": "沪深300ETF嘉实",
@@ -31,8 +27,8 @@
       "base_share": null,
       "base_date": "2025-12-31",
       "latest": {
-        "date": "2026-09-29",
-        "share": 661881.66
+        "date": "2026-09-30",
+        "share": 686631.66
       }
     },
     {
@@ -42,8 +38,8 @@
       "base_share": 3150245.49,
       "base_date": "2025-12-31",
       "latest": {
-        "date": "2026-09-29",
-        "share": 2073045.49
+        "date": "2026-09-30",
+        "share": 2060945.49
       }
     }
   ]
