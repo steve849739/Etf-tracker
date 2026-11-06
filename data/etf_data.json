@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-06T00:01:02.908932",
+  "fetched_at": "2026-11-06T08:19:34.093473",
   "mode": "daily",
   "funds": [
     {
@@ -8,7 +8,7 @@
       "source": "上交所",
       "base_share": null,
       "base_date": "2025-12-31",
-      "_error": "403 Client Error: Forbidden for url: https://query.sse.com.cn/commonQuery.do?jsonCallBack=callback",
+      "_error": "HTTPSConnectionPool(host='query.sse.com.cn', port=443): Max retries exceeded with url: /commonQuery.do?jsonCallBack=callback (Caused by NewConnectionError(\"HTTPSConnection(host='query.sse.com.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
       "latest": null
     },
     {
@@ -17,7 +17,7 @@
       "source": "上交所",
       "base_share": null,
       "base_date": "2025-12-31",
-      "_error": "403 Client Error: Forbidden for url: https://query.sse.com.cn/commonQuery.do?jsonCallBack=callback",
+      "_error": "HTTPSConnectionPool(host='query.sse.com.cn', port=443): Max retries exceeded with url: /commonQuery.do?jsonCallBack=callback (Caused by NewConnectionError(\"HTTPSConnection(host='query.sse.com.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
       "latest": null
     },
     {
