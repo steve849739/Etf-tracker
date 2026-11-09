@@ -1,24 +1,28 @@
 {
-  "fetched_at": "2026-11-06T08:19:34.093473",
+  "fetched_at": "2026-11-09T00:00:54.284301",
   "mode": "daily",
   "funds": [
     {
       "name": "上证50华夏",
       "code": "510050",
       "source": "上交所",
-      "base_share": null,
+      "base_share": 5666466.68,
       "base_date": "2025-12-31",
-      "_error": "HTTPSConnectionPool(host='query.sse.com.cn', port=443): Max retries exceeded with url: /commonQuery.do?jsonCallBack=callback (Caused by NewConnectionError(\"HTTPSConnection(host='query.sse.com.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
-      "latest": null
+      "latest": {
+        "date": "2026-11-06",
+        "share": 1632666.68
+      }
     },
     {
       "name": "沪深300etf华泰柏瑞",
       "code": "510300",
       "source": "上交所",
-      "base_share": null,
+      "base_share": 8882958.77,
       "base_date": "2025-12-31",
-      "_error": "HTTPSConnectionPool(host='query.sse.com.cn', port=443): Max retries exceeded with url: /commonQuery.do?jsonCallBack=callback (Caused by NewConnectionError(\"HTTPSConnection(host='query.sse.com.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
-      "latest": null
+      "latest": {
+        "date": "2026-11-06",
+        "share": 4664028.77
+      }
     },
     {
       "name": "沪深300ETF嘉实",
@@ -27,8 +31,8 @@
       "base_share": null,
       "base_date": "2025-12-31",
       "latest": {
-        "date": "2026-11-05",
-        "share": 1405911.66
+        "date": "2026-11-06",
+        "share": 1405461.66
       }
     },
     {
@@ -38,8 +42,8 @@
       "base_share": 3150245.49,
       "base_date": "2025-12-31",
       "latest": {
-        "date": "2026-11-05",
-        "share": 4491445.49
+        "date": "2026-11-06",
+        "share": 4537245.49
       }
     }
   ]
